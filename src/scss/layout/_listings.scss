@@ -1,0 +1,53 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+
+
+@include m.tablet{
+     
+    .listings-container{
+        @include m.grid(3,2rem);
+       
+    }
+}
+
+.ads{
+    background-color: lighten( v.$grey, 5);
+    border: 1px solid v.$grey;
+    border-radius: .5rem;
+    margin-bottom: 0.5rem;
+    
+    .listings-content{
+        padding: 2rem;
+    }
+    h3, p {
+        margin: 0;
+    }
+    .price{
+        color: v.$green;
+        font-weight: v.$bold;
+        font-size: 3rem;
+    }
+    img{
+        border-radius: .5rem;
+    }
+}
+
+.house-icons{
+    display: flex;
+    list-style: none;
+    padding: 0;
+
+    li{
+        flex: 1;
+        display: flex;
+        
+        img{
+            flex: 0 0 5rem;
+            margin-right: 1rem;
+        }
+        p{
+            font-weight: v.$blackF;
+        }
+    }
+}
