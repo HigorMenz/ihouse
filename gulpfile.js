@@ -69,10 +69,11 @@ function procesarImagenes(file, outputSubDir) {
     }
 }
 
-export function dev() {
+export function dev(cb) {
     watch( paths.scss, css );
     watch( paths.js, js );
     watch('src/img/**/*.{png,jpg}', imagenes)
+    cb();
 }
 
 export default series( js, css, imagenes, dev )

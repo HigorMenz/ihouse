@@ -18,24 +18,95 @@
             <a href="contact.html">Contact</a>
           </nav>
         </div>
-     
       </div>
     </header>
 
     <main class="container section">
-      <h1>contact</h1>
+      <h1>Contact Us</h1>
+
+      <picture>
+        <source srcset="build/img/destacada3.webp" type="image/webp" />
+        <source srcset="build/img/destacada3.jpeg" type="image/jpg" />
+        <img
+          loading="lazy"
+          src="build/img/destacada3.jpg"
+          alt="Contact us image"
+        />
+      </picture>
+
+      <h2>Complete this form</h2>
+
+      <form class="form-contact">
+        <fieldset>
+          <legend>Personal Information</legend>
+
+          <label for="name-contact">Name: </label>
+          <input type="text" placeholder="Your name..." id="name-contact" />
+
+          <label for="email-contact">E-mail: </label>
+          <input type="email" placeholder="Your email..." id="email-contact" />
+
+          <label for="phone-contact">Phone: </label>
+          <input
+            type="tel"
+            placeholder="Your phone number..."
+            id="phone-contact"
+          />
+
+          <label for="message-contact">Message: </label>
+          <textarea class="textareac" id="message-contact"></textarea>
+        </fieldset>
+
+        <fieldset>
+          <legend>Real estate details</legend>
+
+          <label for="options-contact">Sale or Purchase: </label>
+          <select id="options-contact">
+            <option value="" disabled selected>--Select--</option>
+            <option value="Sale">Sale</option>
+            <option value="Purchase">Purchase</option>
+          </select>
+
+          <label for="proposal-contact">buy/sell proposal</label>
+          <input
+            type="number"
+            placeholder="Your proposal..."
+            id="proposal-contact"
+          />
+        </fieldset>
+        <fieldset>
+          <legend>Contact</legend>
+          <p>Preferred contact method</p>
+          <div class="form-rad">
+            <label for="p-contact">Phone:</label>
+            <input name="contact" type="radio" value="phone" id="p-contact" />
+
+            <label for="e-contact">E-mail:</label>
+            <input name="contact" type="radio" value="email" id="e-contact" />
+          </div>
+          <p>
+            If phone contact is preferred, select your preferred date and time
+          </p>
+          <label for="date-contact">Date: </label>
+          <input type="date" id="date-contact" />
+
+          <label for="time-contact">Time: </label>
+          <input type="time" id="time-contact" min="09:00" max="18:00" />
+        </fieldset>
+        <input type="submit" value="Send" class="green-button" />
+      </form>
     </main>
 
     <footer class="footer section">
-        <div class="container footer-container">
-            <nav class="navbar">
-                <a href="about.html">About Us</a>
-                <a href="listings.html">Listings</a>
-                <a href="blog.html">Blog</a>
-                <a href="contact.html">Contact</a>
-              </nav>
-        </div>
-        <p class="copyright">Copyright © 2024 IHouse. All rights reserved</p>
+      <div class="container footer-container">
+        <nav class="navbar">
+          <a href="about.html">About Us</a>
+          <a href="listings.html">Listings</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+      <p class="copyright">Copyright © 2024 IHouse. All rights reserved</p>
     </footer>
 
     <script src="build/js/bundle.min.js"></script>

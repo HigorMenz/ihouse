@@ -4,6 +4,11 @@
     margin-top: calc(v.$space / 2);
     margin-bottom: calc(v.$space / 2);
 }
-.contenido-centrado {
+.center-content {
     max-width: 800px;
+}
+
+.align-right{
+    display: flex;
+    justify-content: flex-end;
 }

@@ -15,7 +15,7 @@
     background-color: lighten( v.$grey, 5);
     border: 1px solid v.$grey;
     border-radius: .5rem;
-    margin-bottom: 0.5rem;
+    
     
     .listings-content{
         padding: 2rem;
@@ -23,20 +23,22 @@
     h3, p {
         margin: 0;
     }
-    .price{
-        color: v.$green;
-        font-weight: v.$bold;
-        font-size: 3rem;
-    }
+   
     img{
-        border-radius: .5rem;
+        border-radius: .5rem .5rem 0 0;
     }
+}
+.price{
+    color: v.$green;
+    font-weight: v.$bold;
+    font-size: 3rem;
 }
 
 .house-icons{
     display: flex;
     list-style: none;
     padding: 0;
+    max-width: 40rem;
 
     li{
         flex: 1;
