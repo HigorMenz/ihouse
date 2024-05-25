@@ -2,20 +2,16 @@
 @use "base/mixins" as m;
 
 .about-container {
-  margin-top: 2rem;
+
 
   @include m.tablet {
     @include m.grid(2, 2rem);
   }
-  .about-text {
-    span {
-      font-weight: v.$blackF;
-      margin-top: 2rem;
-      display: block;
-      @include m.tablet {
-        margin-top: 0;
-      }
-    }
+  .about-text blockquote {
+    font-weight: v.$blackF;
+    font-size: 2.2rem;
+    margin: 3rem 0 0 0;
+    padding-left: 1rem 0 3rem 0;
   }
 
   
