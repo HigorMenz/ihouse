@@ -1,44 +1,14 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>IHouse</title>
-    <link rel="stylesheet" href="build/css/app.css" />
-  </head>
-  <body>
-    <header class="header home">
-      <div class="container header-content">
-        <div class="bar">
-          <a class="logot" href="/">I<strong>House</strong></a>
-
-          <div class="mobile-menu">
-            <img src="build/img/barras.svg" alt="mobile menu">
-
-          </div>
-
-          <div class="right">
-            <img  class="dark-mode-button" src="build/img/dark-mode.svg" alt="dark-mode">
-
-            <nav class="navbar">
-              <a href="about.html">About Us</a>
-              <a href="listings.html">Listings</a>
-              <a href="blog.html">Blog</a>
-              <a href="contact.html">Contact</a>
-            </nav>
-          </div>
-
-        </div>
-        <h1>Discover extraordinary properties Curated for you.</h1>
-      </div>
-    </header>
+<?php
+$home = true;
+include './includes/templates/header.php';
+?>
 
     <main class="container section">
       <h1>More about us</h1>
 
       <div class="our-icons">
         <div class="icon">
-          <img src="build/img/icono1.svg" alt="security logo" loading="lazy" />
+          <img src="/ihouse/build/img/icono1.svg" alt="security logo" loading="lazy" />
           <h3>Security</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Est beatae
@@ -48,7 +18,7 @@
           </p>
         </div>
         <div class="icon">
-          <img src="build/img/icono2.svg" alt="security price" loading="lazy" />
+          <img src="/ihouse/build/img/icono2.svg" alt="security price" loading="lazy" />
           <h3>Price</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Est beatae
@@ -58,7 +28,7 @@
           </p>
         </div>
         <div class="icon">
-          <img src="build/img/icono3.svg" alt="security time" loading="lazy" />
+          <img src="/ihouse/build/img/icono3.svg" alt="security time" loading="lazy" />
           <h3>Time</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Est beatae
@@ -76,11 +46,11 @@
       <div class="listings-container">
         <div class="ads">
           <picture class="bord">
-            <source srcset="build/img/anuncio1.webp" type="image/webp" />
-            <source srcset="build/img/anuncio1.jpg" type="image/jpeg" />
+            <source srcset="/ihouse/build/img/anuncio1.webp" type="image/webp" />
+            <source srcset="/ihouse/build/img/anuncio1.jpg" type="image/jpeg" />
             <img
               loading="lazy"
-              src="build/img/anuncio1.jpg"
+              src="/ihouse/build/img/anuncio1.jpg"
               alt="house picture"
             />
           </picture>
@@ -91,13 +61,13 @@
             <p class="price">$3.000.000</p>
             <ul class="house-icons">
               <li>
-                <img loading="lazy" src="build/img/icono_wc.svg" alt="wc" />
+                <img loading="lazy" src="/ihouse/build/img/icono_wc.svg" alt="wc" />
                 <p>3</p>
               </li>
               <li>
                 <img
                   loading="lazy"
-                  src="build/img/icono_estacionamiento.svg"
+                  src="/ihouse/build/img/icono_estacionamiento.svg"
                   alt="parking spots"
                 />
                 <p>3</p>
@@ -105,23 +75,23 @@
               <li>
                 <img
                   loading="lazy"
-                  src="build/img/icono_dormitorio.svg"
+                  src="/ihouse/build/img/icono_dormitorio.svg"
                   alt="bedrooms"
                 />
                 <p>5</p>
               </li>
             </ul>
-            <a href="housepage.html" class="yellow-button-block"> View More </a>
+            <a href="housepage.php" class="yellow-button-block"> View More </a>
           </div>
         </div>
 
         <div class="ads">
           <picture class="bord">
-            <source srcset="build/img/anuncio2.webp" type="image/webp" />
-            <source srcset="build/img/anuncio2.jpg" type="image/jpeg" />
+            <source srcset="/ihouse/build/img/anuncio2.webp" type="image/webp" />
+            <source srcset="/ihouse/build/img/anuncio2.jpg" type="image/jpeg" />
             <img
               loading="lazy"
-              src="build/img/anuncio2.jpg"
+              src="/ihouse/build/img/anuncio2.jpg"
               alt="house picture"
             />
           </picture>
@@ -132,13 +102,13 @@
             <p class="price">$3.000.000</p>
             <ul class="house-icons">
               <li>
-                <img loading="lazy" src="build/img/icono_wc.svg" alt="wc" />
+                <img loading="lazy" src="/ihouse/build/img/icono_wc.svg" alt="wc" />
                 <p>3</p>
               </li>
               <li>
                 <img
                   loading="lazy"
-                  src="build/img/icono_estacionamiento.svg"
+                  src="/ihouse/build/img/icono_estacionamiento.svg"
                   alt="parking spots"
                 />
                 <p>3</p>
@@ -146,23 +116,23 @@
               <li>
                 <img
                   loading="lazy"
-                  src="build/img/icono_dormitorio.svg"
+                  src="/ihouse/build/img/icono_dormitorio.svg"
                   alt="bedrooms"
                 />
                 <p>5</p>
               </li>
             </ul>
-            <a href="housepage.html" class="yellow-button-block"> View More </a>
+            <a href="housepage.php" class="yellow-button-block"> View More </a>
           </div>
         </div>
 
         <div class="ads">
           <picture class="bord">
-            <source srcset="build/img/anuncio3.webp" type="image/webp" />
-            <source srcset="build/img/anuncio3.jpg" type="image/jpeg" />
+            <source srcset="/ihouse/build/img/anuncio3.webp" type="image/webp" />
+            <source srcset="/ihouse/build/img/anuncio3.jpg" type="image/jpeg" />
             <img
               loading="lazy"
-              src="build/img/anuncio3.jpg"
+              src="/ihouse/build/img/anuncio3.jpg"
               alt="house picture"
             />
           </picture>
@@ -173,13 +143,13 @@
             <p class="price">$3.000.000</p>
             <ul class="house-icons">
               <li>
-                <img loading="lazy" src="build/img/icono_wc.svg" alt="wc" />
+                <img loading="lazy" src="/ihouse/build/img/icono_wc.svg" alt="wc" />
                 <p>3</p>
               </li>
               <li>
                 <img
                   loading="lazy"
-                  src="build/img/icono_estacionamiento.svg"
+                  src="/ihouse/build/img/icono_estacionamiento.svg"
                   alt="parking spots"
                 />
                 <p>3</p>
@@ -187,19 +157,19 @@
               <li>
                 <img
                   loading="lazy"
-                  src="build/img/icono_dormitorio.svg"
+                  src="/ihouse/build/img/icono_dormitorio.svg"
                   alt="bedrooms"
                 />
                 <p>5</p>
               </li>
             </ul>
-            <a href="housepage.html" class="yellow-button-block"> View More </a>
+            <a href="housepage.php" class="yellow-button-block"> View More </a>
           </div>
         </div>
       </div>
       
       <div class="align-right">
-        <a href="listings.html" class="green-button">More</a>
+        <a href="listings.php" class="green-button">More</a>
       </div>
     </section>
 
@@ -209,7 +179,7 @@
         Please fill out the form and we will get in touch with you as soon as
         possible.
       </p>
-      <a href="contact.html" class="yellow-button">Contact Us</a>
+      <a href="contact.php" class="yellow-button">Contact Us</a>
     </section>
 
     <div class="container section lower-section">
@@ -218,13 +188,13 @@
         <article class="blog-entry">
           <div class="blog-img">
             <picture>
-              <source srcset="build/img/blog1.webp" type="image/webp" />
-              <source srcset="build/img/blog1.jpg" type="image/jpeg" />
-              <img loading="lazy" src="build/img/blog1.jpg" alt="post image" />
+              <source srcset="/ihouse/build/img/blog1.webp" type="image/webp" />
+              <source srcset="/ihouse/build/img/blog1.jpg" type="image/jpeg" />
+              <img loading="lazy" src="/ihouse/build/img/blog1.jpg" alt="post image" />
             </picture>
           </div>
           <div class="blog-description">
-            <a href="blog.html">
+            <a href="blog.php">
               <h4>Lorem ipsum dolor sit.</h4>
               <p class="mta-info"><span>08/24/2024</span> by: <span>Admin</span></p>
               <p>
@@ -238,13 +208,13 @@
         <article class="blog-entry">
           <div class="blog-img">
             <picture>
-              <source srcset="build/img/blog2.webp" type="image/webp" />
-              <source srcset="build/img/blog2.jpg" type="image/jpeg" />
-              <img loading="lazy" src="build/img/blog2.jpg" alt="post image" />
+              <source srcset="/ihouse/build/img/blog2.webp" type="image/webp" />
+              <source srcset="/ihouse/build/img/blog2.jpg" type="image/jpeg" />
+              <img loading="lazy" src="/ihouse/build/img/blog2.jpg" alt="post image" />
             </picture>
           </div>
           <div class="blog-description">
-            <a href="blog.html">
+            <a href="blog.php">
               <h4>Lobis laboriosam .</h4>
               <p class="mta-info"><span>08/24/2024</span> by: <span>Admin</span></p>
               <p>
@@ -268,18 +238,6 @@
       </section>
     </div>
 
-    <footer class="footer section">
-      <div class="container footer-container">
-        <nav class="navbar">
-          <a href="about.html">About Us</a>
-          <a href="listings.html">Listings</a>
-          <a href="blog.html">Blog</a>
-          <a href="contact.html">Contact</a>
-        </nav>
-      </div>
-      <p class="copyright">Copyright © 2024 IHouse. All rights reserved</p>
-    </footer>
-
-    <script src="./build/js/bundle.min.js"></script>
-  </body>
-</html>
+<?php
+include './includes/templates/footer.php';
+?>

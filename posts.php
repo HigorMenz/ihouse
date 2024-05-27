@@ -1,35 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="build/css/app.css" />
-    <title>Document</title>
-</head>
-<body>
-    <header class="header">
-        <div class="container header-content">
-          <div class="bar">
-            <a class="logot" href="/">I<strong>House</strong></a>
-         
-            <div class="mobile-menu">
-              <img src="build/img/barras.svg" alt="mobile menu">
-  
-            </div>
-  
-            <div class="right">
-              <img  class="dark-mode-button" src="build/img/dark-mode.svg" alt="dark-mode">
-  
-              <nav class="navbar">
-                <a href="about.html">About Us</a>
-                <a href="listings.html">Listings</a>
-                <a href="blog.html">Blog</a>
-                <a href="contact.html">Contact</a>
-              </nav>
-            </div>
-          </div>
-        </div>
-      </header>
+<?php
+include './includes/templates/header.php'
+?>
 
       <main class="container section center-content">
         <h1>Decorating tips</h1>
@@ -62,19 +33,6 @@
           </p>
         </div>
       </main>
-
-      <footer class="footer section">
-        <div class="container footer-container">
-          <nav class="navbar">
-            <a href="about.html">About Us</a>
-            <a href="listings.html">Listings</a>
-            <a href="blog.html">Blog</a>
-            <a href="contact.html">Contact</a>
-          </nav>
-        </div>
-        <p class="copyright">Copyright © 2024 IHouse. All rights reserved</p>
-      </footer>
-  
-      <script src="./build/js/bundle.min.js"></script>
-</body>
-</html>
+      <?php
+include './includes/templates/footer.php';
+?>

@@ -3,11 +3,12 @@
 
 
 .no-webp .contact-img{
-    background-image: url(../../../build/img/encuentra.jpg);
+    background-image: url('/ihouse/build/img/encuentra.jpg');
 }
 .webp .contact-img{
-    background-image: url(../../../build/img/encuentra.webp);
+    background-image: url('/ihouse/build/img/encuentra.webp');
 }
+
 .contact-img{
     background-position: center center;
     background-size: cover;
