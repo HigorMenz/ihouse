@@ -10,6 +10,6 @@
       <p class="copyright">Copyright © 2024 IHouse. All rights reserved</p>
     </footer>
 
-    <script src="build/js/bundle.min.js"></script>
+    <script src="/ihouse/build/js/bundle.min.js"></script>
   </body>
 </html>

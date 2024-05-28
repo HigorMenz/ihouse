@@ -21,10 +21,10 @@
             <img  class="dark-mode-button" src="/ihouse/build/img/dark-mode.svg" alt="dark-mode">
 
             <nav class="navbar">
-              <a href="about.php">About Us</a>
-              <a href="listings.php">Listings</a>
-              <a href="blog.php">Blog</a>
-              <a href="contact.php">Contact</a>
+              <a href="/ihouse/about.php">About Us</a>
+              <a href="/ihouse/listings.php">Listings</a>
+              <a href="/ihouse/blog.php">Blog</a>
+              <a href="/ihouse/contact.php">Contact</a>
             </nav>
           </div>
 

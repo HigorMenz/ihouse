@@ -1,5 +1,6 @@
 <?php
-include './includes/templates/header.php'
+require 'includes/functions.php';
+templateInclude('header');
 ?>
     </header>
 
@@ -44,7 +45,7 @@ include './includes/templates/header.php'
                 <p>5</p>
               </li>
             </ul>
-            <a href="housepage.html" class="yellow-button-block"> View More </a>
+            <a href="housepage.php" class="yellow-button-block"> View More </a>
           </div>
         </div>
 
@@ -85,7 +86,7 @@ include './includes/templates/header.php'
                 <p>5</p>
               </li>
             </ul>
-            <a href="housepage.html" class="yellow-button-block"> View More </a>
+            <a href="housepage.php" class="yellow-button-block"> View More </a>
           </div>
         </div>
 
@@ -126,7 +127,7 @@ include './includes/templates/header.php'
                 <p>5</p>
               </li>
             </ul>
-            <a href="housepage.html" class="yellow-button-block"> View More </a>
+            <a href="housepage.php" class="yellow-button-block"> View More </a>
           </div>
         </div>
 
@@ -167,7 +168,7 @@ include './includes/templates/header.php'
                 <p>5</p>
               </li>
             </ul>
-            <a href="housepage.html" class="yellow-button-block"> View More </a>
+            <a href="housepage.php" class="yellow-button-block"> View More </a>
           </div>
         </div>
 
@@ -208,7 +209,7 @@ include './includes/templates/header.php'
                 <p>5</p>
               </li>
             </ul>
-            <a href="housepage.html" class="yellow-button-block"> View More </a>
+            <a href="housepage.php" class="yellow-button-block"> View More </a>
           </div>
         </div>
 
@@ -249,12 +250,12 @@ include './includes/templates/header.php'
                 <p>5</p>
               </li>
             </ul>
-            <a href="housepage.html" class="yellow-button-block"> View More </a>
+            <a href="housepage.php" class="yellow-button-block"> View More </a>
           </div>
         </div>
       </div>
     </main>
     
     <?php
-include './includes/templates/footer.php';
+templateInclude('footer');
 ?>
