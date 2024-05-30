@@ -18,7 +18,7 @@ templateInclude('header');
 
       <h2>Complete this form</h2>
 
-      <form class="form-contact">
+      <form class="form">
         <fieldset>
           <legend>Personal Information</legend>
 
@@ -40,7 +40,7 @@ templateInclude('header');
         </fieldset>
 
         <fieldset>
-          <legend>Real estate details</legend>
+          <legend>Property Information Details</legend>
 
           <label for="options-contact">Sale or Purchase: </label>
           <select id="options-contact">
