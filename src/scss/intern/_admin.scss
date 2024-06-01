@@ -1,0 +1,12 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.alert {
+  &.error {
+    background-color: v.$alert;
+    color: v.$white;
+    margin: 1rem;
+    padding-left: 1rem;
+    text-transform: uppercase;
+  }
+}
