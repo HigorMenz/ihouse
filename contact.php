@@ -36,7 +36,7 @@ templateInclude('header');
           />
 
           <label for="message-contact">Message: </label>
-          <textarea class="textareac" id="message-contact"></textarea>
+          <textarea class="textarea" id="message-contact"></textarea>
         </fieldset>
 
         <fieldset>

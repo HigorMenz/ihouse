@@ -1,11 +1,11 @@
-@use "base/variables" as v;
-@use "base/mixins" as m;
+@use "variables" as v;
+@use "mixins" as m;
 
 .dark-mode {
   background-color: darken(v.$greyO, 10);
 
-  p {
-    color: v.$white;
+  p{
+    color: v.$grey;
   }
   a,
   h1,
@@ -14,6 +14,8 @@
   h4 {
     color: v.$grey;
   }
+
+
 
   .ads {
     background-color: v.$greyO;
@@ -25,6 +27,7 @@
       color: v.$blackC;
     }
   }
+  
 
   .price {
     color: v.$green;
@@ -34,11 +37,11 @@
     color: v.$white;
   }
 
-  .form-contact {
+  .form {
     label,
     legend,
     p {
-      color: v.$grey;
+      color: v.$white;
     }
 
     input:not([type="submit"]),

@@ -18,7 +18,7 @@
           </div>
 
           <div class="right">
-            <img  class="dark-mode-button" src="/ihouse/build/img/dark-mode.svg" alt="dark-mode">
+            <img  class="dark-mode-button" src="/ihouse/build/img/dark-mode.svg" alt="dark mode">
 
             <nav class="navbar">
               <a href="/ihouse/about.php">About Us</a>

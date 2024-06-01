@@ -3,6 +3,12 @@
 require '../../includes/config/db.php';
 $db = connectDB();
 
+
+//form validation
+$err = [];
+
+
+//insert info in bd
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   echo "<pre>";
   var_dump($_POST);
@@ -15,6 +21,30 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $bathroom = $_POST['bathroom'];
   $parking = $_POST['parking'];
   $brokerId = $_POST['brokers'];
+
+
+  if(!$title){
+    $err[] = "You need to insert a title.";
+  }
+  if(!$price){
+    $err[] = "You need to insert a price.";
+  }
+  if(strlen($description) < 50){
+    $err[] = "You need to insert a description of at least 50 characters.";
+  }
+  if(!$bedroom){
+    $err[] = "The number of bedrooms is required.";
+  }
+  if(!$bathroom){
+    $err[] = "The number of bathrooms is required.";
+  }
+  if(!$parking){
+    $err[] = "The number of parking slots is required.";
+  }
+  if(!$brokerId){
+    $err[] = "You need to select a broker.";
+  }
+
 
   //insert in to bd
   $query = " INSERT INTO realestates (title, price, description, bedrooms, bathrooms, parkingslots, brokers_id ) VALUES ('$title','$price','$description','$bedroom','$bathroom','$parking','$brokerId')";
@@ -75,7 +105,7 @@ templateInclude('header');
       <legend>Broker</legend>
 
       <select name="brokers">
-
+        <option value="" disabled selected>--- Select --- </option>
         <option value="1">Higor</option>
         <option value="2">Jhon</option>
       </select>
