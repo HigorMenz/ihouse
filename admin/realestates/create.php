@@ -8,16 +8,16 @@ $db = connectDB();
 $err = [];
 
 //get brokers
-$brokers= "SELECT * FROM brokers";
-$res = mysqli_query($db,$brokers);
+$brokers = "SELECT * FROM brokers";
+$res = mysqli_query($db, $brokers);
 //
-$title  ="";
-$price ="";
-$description ="";
-$bedroom ="";
-$bathroom ="";
-$parking ="";
-$brokerId ="";
+$title  = "";
+$price = "";
+$description = "";
+$bedroom = "";
+$bathroom = "";
+$parking = "";
+$brokerId = "";
 
 
 //insert info in bd
@@ -35,6 +35,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $brokerId = mysqli_real_escape_string($db, $_POST['brokers']);
   $created = date('Y/m/d');
 
+  $image = $_FILES['images'];
+
 
   if (!$title) {
     $err[] = "You need to insert a title.";
@@ -42,6 +44,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   if (!$price) {
     $err[] = "You need to insert a price.";
   }
+  if (!$image) {
+    $err[] = "You need to insert a price.";
+  }
+
   if (strlen($description) < 50) {
     $err[] = "You need to insert a description of at least 50 characters.";
   }
@@ -57,20 +63,42 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   if (!$brokerId) {
     $err[] = "You need to select a broker.";
   }
+  if (!$image['name'] || $image['error']) {
+    $err[] = "The image is mandatory";
+  }
 
-
+  //image size only 100kb
+  $size = 10001 * 10001;
+  if ($image['size'] > $size) {
+    $err[] = "The image is very large.
+    ";
+  }
   //Review if the array of errors is empty.
 
   if (empty($err)) {
+
+    /** create image folder **/
+    $imageFolder = './../../images/';
+
+    if (!is_dir($imageFolder)) {
+      mkdir($imageFolder);
+    }
+
+
+    $imageName = md5(uniqid(rand(), true) ) . ".jpg";
+    /** upload files **/
+    move_uploaded_file($image['tmp_name'], $imageFolder . $imageName);
+
+
     //insert on bd
-    $query = " INSERT INTO realestates (title, price, description, bedrooms, bathrooms, parkingslots,created, brokers_id ) VALUES ('$title','$price','$description','$bedroom','$bathroom','$parking', ' $created', '$brokerId')";
+    $query = " INSERT INTO realestates (title, price,image, description, bedrooms, bathrooms, parkingslots,created, brokers_id ) VALUES ('$title','$price','$imageName', '$description','$bedroom','$bathroom','$parking', ' $created', '$brokerId')";
 
     $result = mysqli_query($db, $query);
 
     if ($result) {
       //Redirect
-     
-      header('Location: /ihouse/admin/index.php');
+
+      header('Location: /ihouse/admin/index.php?result=1');
     }
   }
 }
@@ -95,7 +123,7 @@ templateInclude('header');
 
   <?php endforeach; ?>
 
-  <form class="form" method="POST" action="../../admin/realestates/create.php">
+  <form class="form" method="POST" action="../../admin/realestates/create.php" enctype="multipart/form-data">
     <fieldset>
       <legend>General info</legend>
       <label for="title">Title:</label>
@@ -105,7 +133,7 @@ templateInclude('header');
       <input type="number" id="price" name="price" placeholder="Price" value="<?php echo $price; ?>">
 
       <label for="image">Image:</label>
-      <input type="file" id="image" name="image" accept="image/jpeg, image/png">
+      <input type="file" id="image" name="images" accept="image/jpeg, image/png">
 
       <label for="description">Description:</label>
       <textarea name="description" name="description" id="description" value="<?php echo $description; ?>"></textarea>
@@ -132,9 +160,9 @@ templateInclude('header');
 
       <select name="brokers" value="">
         <option value="" disabled selected>--- Select --- </option>
-        <?php while($row = mysqli_fetch_assoc($res)) : ?>
-          <option <?php echo $brokerId === $row['id'] ? 'selected' : ""; ?> value="<?php echo $row['id']; ?>"> <?php echo $row['name'] ." ". $row['surname']; ?></option>
-          <?php endwhile; ?>
+        <?php while ($row = mysqli_fetch_assoc($res)) : ?>
+          <option <?php echo $brokerId === $row['id'] ? 'selected' : ""; ?> value="<?php echo $row['id']; ?>"> <?php echo $row['name'] . " " . $row['surname']; ?></option>
+        <?php endwhile; ?>
       </select>
     </fieldset>
 

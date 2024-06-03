@@ -18,3 +18,11 @@
     margin-bottom: 2.5rem;
     
 }
+
+.red-button-block{
+    @include m.button(v.$alert, block);
+    
+}
+.green-button-block{
+    @include m.button(v.$yellow, block);
+}

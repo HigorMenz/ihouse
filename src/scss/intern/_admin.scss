@@ -9,4 +9,28 @@
     padding-left: 1rem;
     text-transform: uppercase;
   }
+
+  &.success {
+    background-color: v.$green;
+    text-align: center;
+  }
+}
+
+table.props {
+  margin-top: 4rem;
+  width: 100%;
+  border-spacing: 0;
+  align-items: center;
+
+  thead {
+    background-color: v.$green;
+
+    th {
+      color: v.$white;
+      padding: 2rem;
+    }
+  }
+  .td-image{
+    width: 10rem;
+  }
 }
