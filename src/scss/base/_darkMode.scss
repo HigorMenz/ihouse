@@ -4,7 +4,7 @@
 .dark-mode {
   background-color: darken(v.$greyO, 10);
 
-  p{
+  p,td{
     color: v.$grey;
   }
   a,

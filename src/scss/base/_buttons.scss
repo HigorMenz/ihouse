@@ -21,7 +21,7 @@
 
 .red-button-block{
     @include m.button(v.$alert, block);
-    
+    width: 100%
 }
 .green-button-block{
     @include m.button(v.$yellow, block);

@@ -1,3 +1,5 @@
+
+
 <?php
 require 'includes/functions.php';
 templateInclude('header', $home = true);
@@ -43,94 +45,10 @@ templateInclude('header', $home = true);
 <section class="section container">
   <h2>Last Properties</h2>
 
-  <div class="listings-container">
-    <div class="ads">
-      <picture class="bord">
-        <source srcset="/ihouse/build/img/anuncio1.webp" type="image/webp" />
-        <source srcset="/ihouse/build/img/anuncio1.jpg" type="image/jpeg" />
-        <img loading="lazy" src="/ihouse/build/img/anuncio1.jpg" alt="house picture" />
-      </picture>
-
-      <div class="listings-content">
-        <h3>Exclusive coastal mansion</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <p class="price">$3.000.000</p>
-        <ul class="house-icons">
-          <li>
-            <img loading="lazy" src="/ihouse/build/img/icono_wc.svg" alt="wc" />
-            <p>3</p>
-          </li>
-          <li>
-            <img loading="lazy" src="/ihouse/build/img/icono_estacionamiento.svg" alt="parking spots" />
-            <p>3</p>
-          </li>
-          <li>
-            <img loading="lazy" src="/ihouse/build/img/icono_dormitorio.svg" alt="bedrooms" />
-            <p>5</p>
-          </li>
-        </ul>
-        <a href="housepage.php" class="yellow-button-block"> View More </a>
-      </div>
-    </div>
-
-    <div class="ads">
-      <picture class="bord">
-        <source srcset="/ihouse/build/img/anuncio2.webp" type="image/webp" />
-        <source srcset="/ihouse/build/img/anuncio2.jpg" type="image/jpeg" />
-        <img loading="lazy" src="/ihouse/build/img/anuncio2.jpg" alt="house picture" />
-      </picture>
-
-      <div class="listings-content">
-        <h3>Exclusive coastal mansion</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <p class="price">$3.000.000</p>
-        <ul class="house-icons">
-          <li>
-            <img loading="lazy" src="/ihouse/build/img/icono_wc.svg" alt="wc" />
-            <p>3</p>
-          </li>
-          <li>
-            <img loading="lazy" src="/ihouse/build/img/icono_estacionamiento.svg" alt="parking spots" />
-            <p>3</p>
-          </li>
-          <li>
-            <img loading="lazy" src="/ihouse/build/img/icono_dormitorio.svg" alt="bedrooms" />
-            <p>5</p>
-          </li>
-        </ul>
-        <a href="housepage.php" class="yellow-button-block"> View More </a>
-      </div>
-    </div>
-
-    <div class="ads">
-      <picture class="bord">
-        <source srcset="/ihouse/build/img/anuncio3.webp" type="image/webp" />
-        <source srcset="/ihouse/build/img/anuncio3.jpg" type="image/jpeg" />
-        <img loading="lazy" src="/ihouse/build/img/anuncio3.jpg" alt="house picture" />
-      </picture>
-
-      <div class="listings-content">
-        <h3>Exclusive coastal mansion</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <p class="price">$3.000.000</p>
-        <ul class="house-icons">
-          <li>
-            <img loading="lazy" src="/ihouse/build/img/icono_wc.svg" alt="wc" />
-            <p>3</p>
-          </li>
-          <li>
-            <img loading="lazy" src="/ihouse/build/img/icono_estacionamiento.svg" alt="parking spots" />
-            <p>3</p>
-          </li>
-          <li>
-            <img loading="lazy" src="/ihouse/build/img/icono_dormitorio.svg" alt="bedrooms" />
-            <p>5</p>
-          </li>
-        </ul>
-        <a href="housepage.php" class="yellow-button-block"> View More </a>
-      </div>
-    </div>
-  </div>
+  <?php
+    $limit = 6;
+    include './includes/templates/ads.php'
+  ?>
 
   <div class="align-right">
     <a href="listings.php" class="green-button">More</a>

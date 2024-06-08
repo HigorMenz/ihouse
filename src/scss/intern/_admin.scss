@@ -13,7 +13,9 @@
   &.success {
     background-color: v.$green;
     text-align: center;
+    color: v.$white;
   }
+  color: v.$white;
 }
 
 table.props {
@@ -33,4 +35,8 @@ table.props {
   .td-image{
     width: 10rem;
   }
+}
+.img-small{
+  width: 20rem;
+  margin-bottom: 1.8rem;
 }

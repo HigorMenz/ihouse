@@ -48,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $err[] = "You need to insert a price.";
   }
 
-  if (strlen($description) < 50) {
+  if (strlen($description) < 10) {
     $err[] = "You need to insert a description of at least 50 characters.";
   }
   if (!$bedroom) {

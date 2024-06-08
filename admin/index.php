@@ -15,6 +15,29 @@ $resultQuery = mysqli_query($db, $query);
 
 $result = $_GET['result'] ?? null;
 
+
+if($_SERVER['REQUEST_METHOD'] === 'POST'){
+  $id = $_POST['id'];
+  $id = filter_var($id, FILTER_VALIDATE_INT);
+
+  if($id){
+
+    //DELETE REGISTRY
+    $query ="SELECT image FROM realestates WHERE id = {$id}";
+
+    $result = mysqli_query($db, $query);
+    $properties = mysqli_fetch_assoc($result);
+    unlink('../images/' . $properties['image']);
+    //DELETE PROPERTIE
+     $query = "DELETE FROM realestates WHERE id = {$id}";
+
+     $results = mysqli_query ($db, $query);
+     if($results){
+      header( 'LOCATION: /ihouse/admin/index.php');
+     }
+  }
+}
+
 require '../includes/functions.php';
 templateInclude('header');
 ?>
@@ -22,7 +45,9 @@ templateInclude('header');
   <h1>Admin</h1>
 
   <?php if (intval($result) === 1) : ?>
-    <p class="alert success"> Property successfully registered </p>
+    <p class="alert success"> Property Successfully Registered </p>
+  <?php elseif (intval($result) === 2) : ?>
+    <p class="alert success"> Property Successfully Updated </p>
 
   <?php endif; ?>
 
@@ -50,8 +75,11 @@ templateInclude('header');
           <td> <img src="../images/<?php echo $properties['image']; ?>" class="td-image" alt=""></td>
           <td><?php echo $properties['price'] ?></td>
           <td>
-            <a class="green-button-block" href="">Update</a>
-            <a class="red-button-block" href="">Delete</a>
+            <a class="green-button-block" href="./realestates/update.php?id=<?php echo $properties['id'] ?>">Update</a>
+            <form method="POST" class="W-100" >
+              <input type="hidden" name="id" value="<?php echo $properties['id'];?>">
+              <input type="submit" class="red-button-block" value="Delete">
+            </form>
           </td>
         </tr>
       <?php endwhile; ?>
@@ -64,7 +92,8 @@ templateInclude('header');
 
 <?php
 
-msqli_close($db);
+
 
 templateInclude('footer');
+msqli_close($db);
 ?>

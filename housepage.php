@@ -1,21 +1,47 @@
 <?php
+
+//get id info
+$id = $_GET['id'];
+$id = filter_var($id, FILTER_VALIDATE_INT);
+
+
+//redirect
+if(!$id){
+  header("LOCATION: ./index.php");
+
+}
+
+require './includes/config/db.php';
+$db = connectDB();
+
+$query = "SELECT * FROM realestates WHERE id = {$id}";
+
+$result = mysqli_query($db, $query);
+
+if($result -> num_rows === 0){
+  header("LOCATION: ./index.php");
+}
+
+$props = mysqli_fetch_assoc($result);
+
+
+
 require 'includes/functions.php';
 templateInclude('header');
 ?>
 
     <main class="container section center-content">
-      <h1>Exclusive coastal mansion</h1>
+      <h1><?php echo $props['title'];?></h1>
       <picture class="">
-        <source srcset="build/img/anuncio1.webp" type="image/webp" />
-        <source srcset="build/img/anuncio1.jpg" type="image/jpeg" />
-        <img loading="lazy" src="build/img/anuncio1.jpg" alt="house picture" />
+        
+        <img loading="lazy" src="./images/<?php echo $props['image'];?>" alt="house picture" />
       </picture>
       <div class="prop-summary">
-        <p class="price">3.000.000</p>
+        <p class="price"><?php echo $props['price'];?></p>
         <ul class="house-icons">
           <li>
             <img loading="lazy" src="build/img/icono_wc.svg" alt="wc" />
-            <p>3</p>
+            <p><?php echo $props['bathrooms'];?></p>
           </li>
           <li>
             <img
@@ -23,7 +49,7 @@ templateInclude('header');
               src="build/img/icono_estacionamiento.svg"
               alt="parking spots"
             />
-            <p>3</p>
+            <p><?php echo $props['parkingslots'];?></p>
           </li>
           <li>
             <img
@@ -31,7 +57,7 @@ templateInclude('header');
               src="build/img/icono_dormitorio.svg"
               alt="bedrooms"
             />
-            <p>5</p>
+            <p><?php echo $props['bedrooms'];?></p>
           </li>
         </ul>
         <p>
